@@ -17,10 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('#penny-image').src = './assets/images/penny-heads.jpg'
             document.querySelector('#message').textContent = 'You Flipped Heads!'
             document.querySelector('#heads').textContent = headsFlips
-            if (tails == 0){
+            document.querySelector('#heads-percent').textContent = Math.round(headsFlips/totalFlips * 100) + '%'
+            if (tailsFlips == 0){
+                console.log('Only Chuck Norris divides by zero.')
                 return false
             } else {
-                document.querySelector('#heads-percent').textContent = Math.round(headsFlips/totalFlips * 100) + '%'
                 document.querySelector('#tails-percent').textContent = Math.round(tailsFlips/totalFlips * 100) + '%'
             }
             
@@ -31,11 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('#penny-image').src = './assets/images/penny-tails.jpg'
             document.querySelector('#message').textContent = 'You Flipped Tails!'
             document.querySelector('#tails').textContent = tailsFlips
-            if (heads == 0){
+            document.querySelector('#tails-percent').textContent = Math.round(tailsFlips/totalFlips * 100) + '%'
+            if (headsFlips == 0){
+                console.log('Only Chuck Norris divides by zero.')
                 return false
             } else {
                 document.querySelector('#heads-percent').textContent = Math.round(headsFlips/totalFlips * 100) + '%'
-                document.querySelector('#tails-percent').textContent = Math.round(tailsFlips/totalFlips * 100) + '%'
             }
         }
     })
